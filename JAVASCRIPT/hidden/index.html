@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario País y Provincia</title>
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="pais">País:</label>
+        <select id="pais">
+            <option value="">Elige destino</option>
+            <option value="espana">España</option>
+            <option value="fuera">Fuera de España</option>
+        </select>
+
+        <div id="provincia-container" class="hidden">
+            <label for="provincia">Provincia:</label>
+            <select id="provincia">
+                <option value="madrid">Madrid</option>
+                <option value="barcelona">Barcelona</option>
+                <option value="valencia">Valencia</option>
+            </select>
+        </div>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paisSelect = document.getElementById("pais");
+            const provinciaContainer = document.getElementById("provincia-container");
+
+            paisSelect.addEventListener("change", function () {
+                if (this.value === "espana") {
+                    provinciaContainer.style.visibility = "visible";
+                } else {
+                    provinciaContainer.style.visibility = "hidden";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
