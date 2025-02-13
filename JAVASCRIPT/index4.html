@@ -21,12 +21,12 @@
             document.write("</table>");
         }
         function factorial(){
-        let numero=prompt("Dime un número que le calculo el factorial");
-        let factorial=1;
-        for( let i=1; i<=10; i++){
-            factorial=factorial*i;
-        }
-        alert("El factorial de " + numero + " es " + factorial);
+            let numero = prompt("Dime un número que le calculo el factorial");
+            let factorial = 1;
+            for (let i = 1; i <= numero; i++) {
+            factorial *= i;
+            }
+            alert("El factorial de " + parseInt(numero) + " es " + factorial);
         }
 
 function alineacion(){
